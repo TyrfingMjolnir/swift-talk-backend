@@ -84,6 +84,8 @@ createdb swifttalk_dev
 
 Note to self the actual db is generated here: `Sources/SwiftTalkServerLib/Migrations.swift`
 
+Change host to path and remove port here to use Unix Domain Sockets `https://github.com/TyrfingMjolnir/swift-talk-backend/blob/master/Sources/NIOWrapper/NIOWrapper.swift#L266`
+
 ### Compiling Assets
 
 Make sure to have browserify installed, then run:
