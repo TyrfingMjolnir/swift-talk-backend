@@ -61,8 +61,7 @@ If you want to run this locally (without Docker), you need to install the follow
 - cmake
 - cmark
 - curl
-- nodejs
-- npm
+- nvm
 - libxml2
 
 ### PostgreSQL
@@ -80,16 +79,22 @@ Note to self the actual db is generated here: Sources/SwiftTalkServerLib/Migrati
 
 ### Compiling Assets
 
+```sh
+nvm i --lts
+```
+
+### Compiling Assets
+
 Make sure to have browserify installed, then run:
 
 ```sh
-npm install -g browserify
+npm i -g browserify
 ```
 
 Then generate the javascript:
 
 ```sh
-npm install
+npm i
 browserify assets_source/javascripts/application.js > assets/application.js
 ```
 
