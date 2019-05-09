@@ -82,7 +82,7 @@ pg_ctl -D .postgres start
 createdb swifttalk_dev
 ```
 
-Note to self the actual db is generated here: Sources/SwiftTalkServerLib/Migrations.swift
+Note to self the actual db is generated here: `Sources/SwiftTalkServerLib/Migrations.swift`
 
 ### Compiling Assets
 
