@@ -81,6 +81,13 @@ chmod 700 .postgres
 pg_ctl -D .postgres start
 createdb swifttalk_dev
 ```
+### In case I would like to clone the original again
+```
+mkdir -p /opt/local/dev/
+sudo chown user /opt/local/dev/
+cd /opt/local/dev/
+git clone https://github.com/objcio/swift-talk-backend/edit/master/README.md
+```
 
 ### Note to self
 the actual db is generated here:
