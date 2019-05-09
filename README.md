@@ -105,6 +105,8 @@ vim /opt/local/dev/swift-talk-backend/Sources/SwiftTalkServerLib/Database.swift#
 
 Remember to set up nginx or HAProxy as only TCP/IP port as a reverse proxy for swift-talk-backend to avoid piping all your data through localhost
 
+If you ever try this, please run in instruments, otool, and strace, and write about your findings, does this really make a difference? In theory it should give you way more clock cycles to work with.
+
 ### Compiling Assets
 
 Make sure to have browserify installed, then run:
