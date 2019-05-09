@@ -64,6 +64,13 @@ If you want to run this locally (without Docker), you need to install the follow
 - nvm
 - libxml2
 
+### Installing Dependencies
+
+```sh
+brew install postgresql cmake libpq cmark curl nvm libxml2
+nvm i --lts
+```
+
 ### PostgreSQL
 
 You need PostgreSQL and libpq. To set up a local postgres instance:
@@ -76,12 +83,6 @@ createdb swifttalk_dev
 ```
 
 Note to self the actual db is generated here: Sources/SwiftTalkServerLib/Migrations.swift
-
-### Compiling Assets
-
-```sh
-nvm i --lts
-```
 
 ### Compiling Assets
 
