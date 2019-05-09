@@ -76,6 +76,8 @@ pg_ctl -D .postgres start
 createdb swifttalk_dev
 ```
 
+Note to self the actual db is generated here: Sources/SwiftTalkServerLib/Migrations.swift
+
 ### Compiling Assets
 
 Make sure to have browserify installed, then run:
