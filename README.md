@@ -82,9 +82,21 @@ pg_ctl -D .postgres start
 createdb swifttalk_dev
 ```
 
-Note to self the actual db is generated here: `Sources/SwiftTalkServerLib/Migrations.swift`
+### Note to self
+the actual db is generated here:
+```
+vim /opt/local/dev/swift-talk-backend/Sources/SwiftTalkServerLib/Migrations.swift
+```
 
-Change host to path and remove port here to use Unix Domain Sockets `https://github.com/TyrfingMjolnir/swift-talk-backend/blob/master/Sources/NIOWrapper/NIOWrapper.swift#L266`
+Change host to path and remove port here to use Unix Domain Sockets
+
+```
+vim /opt/local/dev/swift-talk-backend/Sources/NIOWrapper/NIOWrapper.swift#L266
+vim /opt/local/dev/swift-talk-backend/Sources/Database/Postgres.swift#L22
+vim /opt/local/dev/swift-talk-backend/Sources/SwiftTalkServerLib/Database.swift#L13
+```
+
+Remember to set up nginx or HAProxy as only TCP/IP port as a reverse proxy for swift-talk-backend to avoid piping all your data through localhost
 
 ### Compiling Assets
 
