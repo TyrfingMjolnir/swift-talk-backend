@@ -263,7 +263,8 @@ public struct Server {
             .childChannelOption(ChannelOptions.maxMessagesPerRead,
                                 value: 1)
         log(info: "Going to start listening on port \(port)")
-        let channel = try bootstrap.bind(host: "0.0.0.0", port: port).wait()
+        let channel = try bootstrap.bind( unixDomainSocketPath: "/tmp/swift-talk-backend-main" ).wait()
+//        let channel = try bootstrap.bind(host: "0.0.0.0", port: port).wait()
         try channel.closeFuture.wait()
     }
 }
